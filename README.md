@@ -11,7 +11,7 @@ chart.js for data visualization <br>
 ### Backend
 Use Node.js with framework like Express <br>
 Database: <br> 
-Relational: PostgreSQP/MySQL <br>
+Relational: PostgreSQL/MySQL <br>
 NoSQL: MongoDB <br><br>
 Include REST API or GraphQL for serving data <br>
 Use Baseball APIs for data (e.g., MLB Stats API, SportsRadar or Baseball-Reference) <br>

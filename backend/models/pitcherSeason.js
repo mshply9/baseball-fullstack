@@ -2,6 +2,7 @@ const{ Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../index');
 const Pitcher = require('./pitcher');
 
+module.exports = (sequelize, DataTypes) => {
 const pitcherSeason = sequelize.define('pitcherSeason', {
   playerID: {
     type: DataTypes.STRING,
@@ -165,4 +166,5 @@ pitcherSeason.belongsTo(Pitcher, {
   foreignKey: 'playerID',
 });
 
-module.exports = pitcherSeason; 
+return pitcherSeason;
+}
