@@ -1,8 +1,9 @@
 const {sequelize, DataTypes} = require('sequelize');
 const sequlize = require('./index');
 
+module.exports = (sequelize, DataTypes) => {
 const Pitcher = sequelize.define('Pitcher', {
-  player_id: {
+  playerID: {
     type: DataTypes.STRING,
     primaryKey: true,
     autoIncrement: true,
@@ -77,4 +78,12 @@ const Pitcher = sequelize.define('Pitcher', {
   },
 });
 
-module.exports = Pitcher;
+Pitcher.associate = (models) => {
+  Pitcher.hasMany(models.PitcherSeason, {
+    foreignKey: 'playerID',
+    as: 'pitcherSeasons',
+  })
+}
+
+return Pitcher;
+};

@@ -2,7 +2,7 @@ const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('./index'); // Assuming sequelize is set up in index.js
 
 const Player = sequelize.define('Player', {
-  player_id: {
+  playerID: {
     type: DataTypes.STRING,
     primaryKey: true,
     autoIncrement: true,
@@ -33,10 +33,6 @@ const Player = sequelize.define('Player', {
   },
   draft: {
     type: DataTypes.STRING,
-    allowNull: false,
-  },
-  avg : {
-    type: DataTypes.FLOAT,
     allowNull: false,
   },
   war: {
