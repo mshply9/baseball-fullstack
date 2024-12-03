@@ -5,7 +5,8 @@ const Player = sequelize.define('Player', {
   playerID: {
     type: DataTypes.STRING,
     primaryKey: true,
-    autoIncrement: true,
+    allowNull: false, 
+    unique: true,
   },
   name: {
     type: DataTypes.STRING,

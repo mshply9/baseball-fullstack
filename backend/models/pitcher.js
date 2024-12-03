@@ -6,7 +6,8 @@ const Pitcher = sequelize.define('Pitcher', {
   playerID: {
     type: DataTypes.STRING,
     primaryKey: true,
-    autoIncrement: true,
+    allowNull: false, 
+    unique: true,
   },
   name: {
     type: DataTypes.STRING,

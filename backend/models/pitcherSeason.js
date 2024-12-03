@@ -6,12 +6,11 @@ module.exports = (sequelize, DataTypes) => {
 const pitcherSeason = sequelize.define('pitcherSeason', {
   playerID: {
     type: DataTypes.STRING,
-    primaryKey: true,
-    allowNull: false
-  },
-  name: {
-    type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: false, 
+    references: {
+      model: 'Pitcher',
+      key: 'playerID',
+    }
   },
   season: {
     type: DataTypes.INTEGER,

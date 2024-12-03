@@ -5,12 +5,11 @@ const Player = require('./player');
 const playerSeason = sequelize.define('playerSeason', {
   playerID: {
     type: DataTypes.STRING,
-    primaryKey: true,
-    allowNull: false
-  },
-  name: {
-    type: DataTypes.STRING,
     allowNull: false,
+    references: {
+      model: 'Player', 
+      key: 'playerID',
+    }
   },
   season: {
     type: DataTypes.INTEGER,
